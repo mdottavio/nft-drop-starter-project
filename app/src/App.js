@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import twitterLogo from "./assets/twitter-logo.svg";
+import CandyMachine from "./CandyMachine";
 import { useWallet } from "./hooks";
 
 // Constants
@@ -26,6 +27,7 @@ const App = () => {
           )}
           {isLoading && <p>Loading</p>}
         </div>
+        {walletAddress && <CandyMachine walletAddress={window.solana} />}
         <div className="footer-container">
           <img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
           <a
